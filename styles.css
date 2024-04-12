@@ -8,10 +8,6 @@ body {
     display: flex;
 }
 
-#headerImage {
-    width: 300px;
-}
-
 h1 {
     color: #fff;
     font-size: 3rem;
@@ -54,4 +50,18 @@ button {
     letter-spacing: 2px;
     background-color: transparent;
     border: none;
+}
+
+@media (min-height: 400px){
+        h1 {
+            justify-content: center;
+            display: flex;
+        }
+
+        .result {
+            height: 30px;
+            width: 30px;
+            font-size: 20px;
+            line-height: 20px;
+        }
 }
