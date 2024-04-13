@@ -51,6 +51,52 @@ button {
     letter-spacing: 2px;
     background-color: transparent;
     border: none;
+    display: inline-block;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+    cursor: grab;
+}
+
+/* Button animation */
+#generateBtn:hover:before {
+    height: 100%;
+    width: 100%;
+}
+
+#generateBtn:hover:after {
+    height: 100%;
+    width: 100%;
+}
+
+#generateBtn::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 30px;
+    width: 30px;
+    border-left: 2px solid #00bfe7;
+    border-top: 2px solid #00bfe7;
+    content: "";
+    z-index: -1;
+    -webkit-transition: all, 0.7s;
+    -o-transition: all, 0.7s;
+    transition: all, 0.7s;
+}
+
+#generateBtn::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 30px;
+    width: 30px;
+    border-right: 2px solid #00bfe7;
+    border-bottom: 2px solid #00bfe7;
+    content: "";
+    z-index: -1;
+    -webkit-transition: all, 0.7s;
+    -o-transition: all, 0.7s;
+    transition: all, 0.7s;
 }
 
 @media (max-width: 400px){
