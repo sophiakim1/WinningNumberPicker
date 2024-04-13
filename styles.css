@@ -20,6 +20,20 @@ h1 {
 .numbers {
     display: flex;
     justify-content: space-between;
+    margin: 120px 0;
+}
+
+@keyframes rolling {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
 }
 
 .result {
@@ -34,6 +48,10 @@ h1 {
     text-align: center;
     line-height: 200px;
     margin-right: 10px;
+
+    margin: 0 5px;
+    opacity: 0;
+    animation: rolling 0.5s ease forwards;
 }
 
 .btn {
