@@ -6,7 +6,7 @@ const picks = []
 const circles = document.querySelectorAll('.result');
 
 function generateLotteryNumbers() {
-    picks.length = 0;
+    picks.length = 0; // Clear the picks array
     pool.sort(() => Math.random() - 0.5); // Shuffle the pool
 
             for (let i = 0; i < 6; i++) {
@@ -18,7 +18,15 @@ function generateLotteryNumbers() {
             });
         }
 
-document.getElementById('generateBtn').addEventListener('click', generateLotteryNumbers);
+document.getElementById('generateBtn').addEventListener('click', function() {
+    generateLotteryNumbers();
+
+    // Clear the pool after generating numbers
+    pool.length = 0;
+
+    // Re-initialize the pool array with the numbers 1 to 49
+    pool.push(...Array(49).keys().map(i => i + 1));
+});
 
 // Generate lottery numbers on page load
 generateLotteryNumbers();

@@ -33,6 +33,7 @@ h1 {
     font-size: 60px;
     text-align: center;
     line-height: 200px;
+    margin-right: 10px;
 }
 
 .btn {
@@ -52,16 +53,18 @@ button {
     border: none;
 }
 
-@media (min-height: 400px){
-        h1 {
-            justify-content: center;
-            display: flex;
-        }
+@media (max-width: 400px){
 
         .result {
-            height: 30px;
-            width: 30px;
+            height: 50px;
+            width: 60px;
             font-size: 20px;
-            line-height: 20px;
+            line-height: 50px;
+            margin-right: 10px;
+        }
+
+        .numbers {
+            padding: 0;
+            margin: 0;
         }
 }
