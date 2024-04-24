@@ -74,6 +74,7 @@ button {
     position: relative;
     z-index: 1;
     cursor: grab;
+    margin-top: 50px;
 }
 
 /* Button animation */
@@ -119,16 +120,20 @@ button {
 
 @media (max-width: 400px){
 
-        .result {
-            height: 50px;
-            width: 60px;
-            font-size: 20px;
-            line-height: 50px;
-            margin-right: 10px;
-        }
+    h1 {
+        text-align: center;
+    }
 
-        .numbers {
-            padding: 0;
-            margin: 0;
-        }
+    .result {
+        height: 50px;
+        width: 60px;
+        font-size: 20px;
+        line-height: 50px;
+        margin-right: 10px;
+    }
+
+    .numbers {
+        padding: 0;
+        margin: 0;
+    }
 }
