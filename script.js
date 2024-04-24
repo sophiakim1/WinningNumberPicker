@@ -15,6 +15,8 @@ function generateLotteryNumbers() {
             picks.push(newPool.shift()); // Remove the first element from the shuffled pool
         }
 
+        picks.sort((a, b) => a - b);
+
         circles.forEach((circle, index) => {
         circle.style.animation = 'none'; // Reset animation
         circle.innerHTML = ''; // Clear previous content
