@@ -8,10 +8,11 @@ const resultContainer = document.querySelector('.resultContainer');
 
 function generateLotteryNumbers() {
     picks.length = 0; // Clear the picks array
-    pool.sort(() => Math.random() - 0.5); // Shuffle the pool
+    const newPool = [...pool]; // Copy of the orinial pool
+    newPool.sort(() => Math.random() - 0.5); // Shuffle the pool
 
         for (let i = 0; i < 6; i++) {
-            picks.push(pool.shift()); // Remove the first element from the pool
+            picks.push(newPool.shift()); // Remove the first element from the shuffled pool
         }
 
         circles.forEach((circle, index) => {
@@ -30,11 +31,9 @@ function generateLotteryNumbers() {
 document.getElementById('generateBtn').addEventListener('click', function() {
     generateLotteryNumbers();
 
-    // Clear the pool after generating numbers
-    pool.length = 0;
-
-    // Re-initialize the pool array with the numbers 1 to 49
-    pool.push(...Array(49).keys().map(i => i + 1));
+    // Re-initialize the picks array and generate new lottery numbers
+    picks.length = 0;
+    generateLotteryNumbers();
 });
 
 // Generate lottery numbers on page load
